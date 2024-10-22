@@ -1,1 +1,258 @@
-fdfd
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0 0 0;
+ }
+.welcome-page-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+}
+
+h1 {
+    font-style: normal;
+    font-size: 5vw;
+    font-weight: 400;
+    color: #567915;
+    text-shadow: 0 4px 4px rgb(86 121 21 / 25%);
+    margin: 10px 0;
+}
+
+h2 {
+    font-family: 'joan';
+    font-style: normal;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 4.5vw;
+    color: #1f1f1f;
+    text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+
+.green-header {
+    color: #567915;
+    text-shadow: 0 4px 4px rgb(86 121 21 / 25%);
+}
+
+.welcome-page-title-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#welcome-page-ficus2-image{
+    flex: 91 1 auto;
+    width: 91px;
+    min-width: 0;
+    transform: scaleX(-1);
+}
+
+#welcome-page-sansevieria-image{
+    flex: 115 1 auto;
+    width: 115px;
+    min-width: 0;
+}
+
+#welcome-page-fotus-image{
+    flex: 108 1 auto;
+    width: 108px;
+    min-width: 0;
+    margin-left: -2vw;
+}
+
+#welcome-page-monstera-image{
+    flex: 128 1 auto;
+    width: 128px;
+    min-width: 0;
+    margin-left: 2vw;
+}
+
+#welcome-page-cactus-image{
+    flex: 39 0.5 auto;
+    width: 39px;
+    min-width: 0;
+    margin-inline: 0.5vw;
+}
+
+#welcome-page-ficus-image{
+    flex: 104 1 auto;
+    width: 104px;
+    min-width: 0;
+
+}
+
+#welcome-page-fotus2-image{
+    flex: 108 1 auto;
+    width: 108px;
+    min-width: 0;
+    margin-left: 1vw;
+    transform: scaleX(-1);
+}
+
+.welcome-page-images-container{
+    display: flex;
+    flex-direction: row;
+    align-items: self-end;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 195vh;
+    margin-top: 10vh;
+}
+
+.catalog-page-title-container{
+    margin: 10px 0 35px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.catalog-page-container{
+    margin: 123px 0 0 0;
+    padding: 18vw 20px;
+    background: linear-gradient(45deg, #d2f5c8, #edfaf9);
+    clip-path: polygon(0 18vw, 100% 0, 100% 100%, 0% 100%);
+}
+
+.catalog-page-plant-image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.catalog-page-item-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    aspect-ratio: 1;
+    padding: 10px;
+    box-shadow:10px 10px 10px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.catalog-page-item-container:hover{
+    scale: 1.05;
+    transition: 0.3s scale;
+}
+
+.catalog-page-items-grid-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-gap: 23px;
+}
+
+.catalog-page-plant-description{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.catalog-page-plant-name{
+    font-family: 'joan';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    margin: 2px 15px 0 0;
+}
+
+.catalog-page-plant-price{
+    font-family: "Jomolhari";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    margin: 3px 0 0 0;
+}
+
+/* For Iphone (screen_width < 500px) */
+@media (max-width: 500px) {
+    h2{
+        font-size: 9.5vw;
+    }
+
+    h1{
+        font-size: 10vw;
+    }
+
+    #welcome-page-fotus2-image{
+        display: none;
+    }
+
+    #welcome-page-ficus2-image{
+        display: none;
+    }
+
+    .welcome-page-images-container {
+        margin-top: 8vh;
+    }
+
+    .catalog-page-items-grid-container{
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+
+    .catalog-page-item-container:hover{
+        scale: none;
+        transition: none;
+    }
+  
+}
+
+/* For Ipad portrait (500px < screen_width < 830px) */
+@media (min-width: 500px) and (max-width: 830px) {
+    h2{
+        font-size: 7.5vw;
+    }
+
+    h1{
+        font-size: 8vw;
+    }
+
+    .welcome-page-images-container {
+        margin-top: 5vh;
+    }
+
+    #welcome-page-ficus2-image{
+        display: none;
+    }
+
+    .catalog-page-items-grid-container{
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+
+    .catalog-page-item-container:hover{
+        scale: none;
+        transition: none;
+    }
+
+}
+
+/* For Ipad landscape (830px < screen_width < 1200px) */
+@media (min-width: 830px) and (max-width: 1200px) {
+    h2{
+        font-size: 5.5vw;
+    }
+
+    h1{
+        font-size: 6vw;
+    }
+    
+    .welcome-page-images-container {
+        margin-top: 15vh;
+    }
+
+    #welcome-page-ficus2-image{
+        display: none;
+    }
+
+    .catalog-page-items-grid-container{
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+
+    .catalog-page-item-container:hover{
+        scale: none;
+        transition: none;
+    }
+}
